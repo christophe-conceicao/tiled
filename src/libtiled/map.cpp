@@ -146,6 +146,15 @@ void Map::replaceTileset(Tileset *oldTileset, Tileset *newTileset)
     mTilesets.replace(index, newTileset);
 }
 
+Tileset *Map::findTileset(const QString &name) const
+{
+    foreach (Tileset *tileset, tilesets())
+        if (tileset->name() == name)
+            return tileset;
+
+    return 0;
+}
+
 bool Map::isTilesetUsed(Tileset *tileset) const
 {
     foreach (const Layer *layer, mLayers)

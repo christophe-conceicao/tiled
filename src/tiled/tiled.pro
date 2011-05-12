@@ -1,4 +1,5 @@
 include(../../tiled.pri)
+include(../liblua/liblua.pri)
 include(../libtiled/libtiled.pri)
 
 TEMPLATE = app
@@ -115,7 +116,10 @@ SOURCES += aboutdialog.cpp \
     commanddialog.cpp \
     tiledapplication.cpp \
     command.cpp \
-    abstractobjecttool.cpp
+    abstractobjecttool.cpp \
+    scriptdock.cpp \
+    scripteditor.cpp \
+    scripthighlighter.cpp
 
 HEADERS += aboutdialog.h \
     automap.h \
@@ -197,7 +201,11 @@ HEADERS += aboutdialog.h \
     commandbutton.h \
     tiledapplication.h \
     command.h \
-    abstractobjecttool.h
+    abstractobjecttool.h \
+    scriptdock.h \
+    scripteditor.h \
+    luabinds.h \
+    scripthighlighter.h
 
 FORMS += aboutdialog.ui \
     mainwindow.ui \
